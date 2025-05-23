@@ -1,7 +1,8 @@
+import React from "react"
 
 export default function Main() {
 
-    const ingredients = ['Olive Oil']
+    const [ingredients, setIngredients] = React.useState([]) 
 
     const ingredientsMapped = ingredients.map((ingredient) =>{
         return (
@@ -9,16 +10,17 @@ export default function Main() {
         )
     })
 
-    function handleSubmit(e){
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget)
+    function handleSubmit(formData){
         const newIngredient = formData.get('ingredient')
-        ingredients.push(newIngredient)
-        console.log(ingredients)
+
+        setIngredients(
+            prevArray => [...prevArray, newIngredient]
+        )
+        
     }
     return(
         <main>
-            <form onSubmit={handleSubmit}>
+            <form action={handleSubmit}>
                 <input 
                 type="text" 
                 placeholder="e.g. Sichuan Pepper"
