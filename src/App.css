@@ -30,6 +30,7 @@ form {
   min-height: 4rem;
   box-sizing: border-box;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 form > input {
@@ -58,8 +59,48 @@ form > button {
   border: none;
 }
 
-ul {
-  margin-left: 40%;
-  margin-top:1%;
+
+.ingredients-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-family: inter;
+}
+
+.ingredients-section > h2 {
+  margin-bottom: 2rem;
+  margin-right: 12rem;
+}
+
+.ingredients-section > ul {
+  margin-right: 20rem;
+}
+
+.get-recipe-container {
+  display: flex;
+}
+
+.get-recipe-container > button {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: rgb(218, 94, 37);
+  max-height: 3rem;
+  margin-top: 3rem;
+  transition: 0.3s;
+}
+
+.get-recipe-container > button:hover {
+  background-color: rgb(19, 145, 65);
+}
+
+.get-recipe-container > div > p {
+  color: rgb(176, 176, 176);
+  margin-top: 0.4rem;
+}
+
+.get-recipe-container > div {
+  margin: 3rem 2rem;
 }
